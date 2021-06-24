@@ -20,7 +20,7 @@ async def rename_filter(c,m):
   text = ""
   button = []
   try:
-    filename = <code>media.file_name</code>
+    filename = media.file_name
     text += f"FileName:\n{filename}\n"
   except:
     # some files dont gib name ..
