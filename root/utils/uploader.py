@@ -42,7 +42,7 @@ async def uploader(bot,file, update, msg,as_file=False):
         if os.path.exists(thumb_location):
            thumb_image_path = await copy_file(thumb_location, os.path.dirname(os.path.abspath(file)))
         try:
-           await bot.send_document(<b>
+           await bot.send_document(
                document=file,
                chat_id=update.chat.id,
                reply_to_message_id=update.message_id,
@@ -55,7 +55,7 @@ async def uploader(bot,file, update, msg,as_file=False):
         	      	     Translation.UPLOAD_MSG,
         	      	     msg,
         	      	     start_time
-        	      	     )</b>)
+        	      	     ))
         except FloodWait as e:
             logger.info(f"Got Flood Wait of {e.x} second me sleeping now...")
             await asyncio.sleep(e.x)
