@@ -50,7 +50,7 @@ async def uploader(bot,file, update, msg,as_file=False):
                force_document=True,
                thumb=thumb_image_path,
                progress=progress_for_pyrogram,
-               caption=filename,
+               caption=<b>filename</b>,
                progress_args=(
         	      	     Translation.UPLOAD_MSG,
         	      	     msg,
