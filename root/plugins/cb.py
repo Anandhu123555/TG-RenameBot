@@ -62,7 +62,7 @@ async def renamer(c,m,as_file=False):
   except:
     extension = "mkv"
   await bot_msg.delete() # delete name asked msg 
-  if len(new_f_name) > 64:
+  if len(new_f_name) > 150:
       await m.reply_text(text=f"Limits of telegram file name is 64 charecters only\nReduce some and try again.")
       return
   d_msg = await m.reply_text(Translation.DOWNLOAD_MSG,True)
